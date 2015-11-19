@@ -86,7 +86,8 @@ return function(opt, params)
          for i in ipairs(hs) do
             hs[i] = torch.view(hs[i], batch,1,hiddenFeatures)
          end
-         return x.cat(hs,2), newState
+         --return x.cat(hs,2), newState
+         return torch.cat(hs,2), newState
       end
    end
 
